@@ -28,10 +28,20 @@
 
 .active-title {
     position: absolute;
-    bottom: 160px;
+    top: 10px;
     left: 10px;
 
     background-color: white;
+    color: #7f3a2c;
+}
+
+.caption {
+    position: absolute;
+    bottom: 160px;
+    left: 10px;
+
+    width: 75%;
+    background-color: #ffffffcf;
     color: #7f3a2c;
 }
 
