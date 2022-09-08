@@ -11,7 +11,7 @@ dopo 5 sec la slide avanza automaticamente
 
 // settings
 const NUM_IMAGES = 5;
-const CHANGE_IMAGE_DELAY = 2;
+const CHANGE_IMAGE_DELAY = 5;
 
 //#region Costanti
 
