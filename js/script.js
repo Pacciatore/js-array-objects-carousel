@@ -20,29 +20,29 @@ const images = [
     {
         url: 'http://www.viaggiareonline.it/wp-content/uploads/2014/11/sweden_148857365.jpg',
         title: 'Svezia',
-        description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam.'
+        description: 'La Svezia è un paese scandinavo che comprende migliaia di isole lungo la costa e laghi nell\'entroterra, oltre a vaste foreste boreali e rilievi glaciali.'
     },
 
     {
         url: 'https://static1.evcdn.net/images/reduction/1513757_w-1920_h-1080_q-70_m-crop.jpg',
         title: 'Perù',
-        description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam.'
+        description: 'Il Perù è una nazione sudamericana che ospita una parte della Foresta Amazzonica e Machu Picchu, l\'antica città inca situata sulla catena delle Ande.'
     },
 
     {
         url: 'https://img.itinari.com/pages/images/original/0d3ed180-d22d-48e8-84df-19c4d888b41f-62-crop.jpg?ch=DPR&dpr=2.625&w=1600&s=7ebd4b5a9e045f41b4e0c7c75d298d6c',
         title: 'Chile',
-        description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam.'
+        description: 'Il Cile è un paese lungo e stretto che si estende lungo il confine occidentale del Sud America, con più di 6000 km di costa affacciata sull\'Oceano Pacifico.'
     },
     {
         url: 'https://static1.evcdn.net/images/reduction/1583177_w-1920_h-1080_q-70_m-crop.jpg',
         title: 'Argentina',
-        description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam.'
+        description: 'L\'Argentina è uno stato sudamericano molto esteso con un territorio che comprende la cordigliera delle Ande, laghi glaciali e le pianure della Pampa, il tradizionale terreno di pascolo dei famosi bovini da carne.'
     },
     {
         url: 'https://cdn.sanity.io/images/24oxpx4s/prod/ed09eff0362396772ad50ec3bfb728d332eb1c30-3200x2125.jpg?w=1600&h=1063&fit=crop',
         title: 'Colombia',
-        description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam.'
+        description: 'La Colombia è un paese che si trova sulla punta nord del Sud America. Il suo paesaggio è caratterizzato da foreste tropicali, dalla catena montuosa delle Ande e da numerose piantagioni di caffè.'
     },
 ];
 console.log(images);
