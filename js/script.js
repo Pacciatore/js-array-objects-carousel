@@ -13,9 +13,7 @@ dopo 5 sec la slide avanza automaticamente
 const NUM_IMAGES = 5;
 const CHANGE_IMAGE_DELAY = 2;
 
-
-let directionRight = true;
-
+//#region Costanti
 
 // Array di immagini con url web
 const images = [
@@ -49,20 +47,19 @@ const images = [
 ];
 console.log(images);
 
-let activeIndex = 0;
-
-buildCarousel(images, activeIndex);
-
-// Intervallo per il cambio automatica all'immagine successiva
-let idInterval = setInterval(autoCarouselMove, CHANGE_IMAGE_DELAY * 1000);
-
-
-
 const leftButton = document.getElementById('left-arrow');
 const rightButton = document.getElementById('right-arrow');
-
 const reverseButton = document.getElementById('reverse-button');
+//#endregion Costanti
 
+//#region Variabili let
+let directionRight = true;
+let activeIndex = 0;
+// Intervallo per il cambio automatica all'immagine successiva
+let idInterval = setInterval(autoCarouselMove, CHANGE_IMAGE_DELAY * 1000);
+//#endregion Variabili let
+
+buildCarousel(images, activeIndex);
 
 // Event listeners
 
