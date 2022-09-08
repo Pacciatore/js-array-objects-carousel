@@ -19,18 +19,30 @@ function buildCarousel(images, activeIndex) {
 
     const carouselImages = document.querySelector('.carousel-images');
     const carouselThumbs = document.querySelector('.carousel-thumbs');
+    const carouselActiveTitle = document.querySelector('.active-title');
     let content = '';
+    let activeTitle = '';
 
     for (let i = 0; i < images.length; i++) {
+
+        let imageClass = 'tr-carousel-img ';
+
+        if (i === activeIndex) {
+            activeTitle = images[i].title;
+            imageClass += 'active';
+        }
+
         const url = images[i].url;
-        const imageClass = i === activeIndex ? 'tr-carousel-img active' : 'tr-carousel-img';
         // Composizione elemento html img
-        content += `<img class="${imageClass}" src="${url}" alt="${url}" />`
+        content += `<img class="${imageClass}" src="${url}" alt="${images[i].title}" />`
     }
+
+    console.log({ activeTitle });
 
     // Composizione elemento html contenitore immagini carosello
     carouselImages.innerHTML = content;
     carouselThumbs.innerHTML = content;
+    carouselActiveTitle.innerHTML = activeTitle;
     // console.log({ content })
 
 }
