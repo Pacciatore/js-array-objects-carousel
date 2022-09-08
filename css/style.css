@@ -1,3 +1,5 @@
+/*#region Carousel  */
+
 .carousel-images {
     height: 50vh;
 }
@@ -42,6 +44,44 @@
     width: 100%;
 }
 
+/*#endregion Carousel  */
+
+/*#region Buttons */
 .tr-btn {
     background-color: #ffffffdd;
+
+    border: 0px;
+    border-radius: 10px;
+
+    padding: 2px 10px;
+    padding-bottom: 5px;
 }
+
+.tr-btn:hover {
+    background-color: #ffffffff;
+}
+
+.reverse-button-container {
+    padding-top: 100px;
+    text-align: center;
+}
+
+#reverse-button {
+    background-color: #8cd8d6dd;
+
+    text-align: center;
+    color: #7f3a2caa;
+    font-weight: 500;
+
+    transition: color 0.25s, background-color 0.25s;
+
+    padding: 5px 15px;
+}
+
+#reverse-button:hover {
+    background-color: #8cd8d6ff;
+
+    color: #7f3a2cff;
+}
+
+/*#endregion Buttons */
