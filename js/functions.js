@@ -20,8 +20,10 @@ function buildCarousel(images, activeIndex) {
     const carouselImages = document.querySelector('.carousel-images');
     const carouselThumbs = document.querySelector('.carousel-thumbs');
     const carouselActiveTitle = document.querySelector('.active-title');
+    const carouselCaption = document.querySelector('.caption');
     let content = '';
     let activeTitle = '';
+    let activeCaption = '';
 
     for (let i = 0; i < images.length; i++) {
 
@@ -29,6 +31,7 @@ function buildCarousel(images, activeIndex) {
 
         if (i === activeIndex) {
             activeTitle = images[i].title;
+            activeCaption = images[i].description;
             imageClass += 'active';
         }
 
@@ -42,7 +45,9 @@ function buildCarousel(images, activeIndex) {
     // Composizione elemento html contenitore immagini carosello
     carouselImages.innerHTML = content;
     carouselThumbs.innerHTML = content;
+
     carouselActiveTitle.innerHTML = activeTitle;
+    carouselCaption.innerHTML = activeCaption;
     // console.log({ content })
 
 }
