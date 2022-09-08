@@ -14,6 +14,9 @@ const NUM_IMAGES = 5;
 const CHANGE_IMAGE_DELAY = 2;
 
 
+let directionRight = true;
+
+
 // Array di immagini con url web
 const images = [
     {
@@ -51,12 +54,14 @@ let activeIndex = 0;
 buildCarousel(images, activeIndex);
 
 // Intervallo per il cambio automatica all'immagine successiva
-let idInterval = setInterval(nextCarouselImage, CHANGE_IMAGE_DELAY * 1000);
+let idInterval = setInterval(autoCarouselMove, CHANGE_IMAGE_DELAY * 1000);
 
 
 
 const leftButton = document.getElementById('left-arrow');
 const rightButton = document.getElementById('right-arrow');
+
+const reverseButton = document.getElementById('reverse-button');
 
 
 // Event listeners
@@ -64,6 +69,8 @@ const rightButton = document.getElementById('right-arrow');
 leftButton.addEventListener('click', previousCarouselImage);
 
 rightButton.addEventListener('click', nextCarouselImage);
+
+reverseButton.addEventListener('click', revertAutoCarousel);
 
 
 // Functions
@@ -111,7 +118,7 @@ function nextCarouselImage() {
     activeIndex = activeIndex < images.length - 1 ? activeIndex + 1 : 0;
     buildCarousel(images, activeIndex);
 
-    idInterval = setInterval(nextCarouselImage, CHANGE_IMAGE_DELAY * 1000);
+    idInterval = setInterval(autoCarouselMove, CHANGE_IMAGE_DELAY * 1000);
 }
 
 
@@ -122,5 +129,23 @@ function previousCarouselImage() {
     activeIndex = activeIndex > 0 ? activeIndex - 1 : images.length - 1;
     buildCarousel(images, activeIndex);
 
-    idInterval = setInterval(nextCarouselImage, CHANGE_IMAGE_DELAY * 1000);
+    idInterval = setInterval(autoCarouselMove, CHANGE_IMAGE_DELAY * 1000);
+}
+
+
+function revertAutoCarousel() {
+    directionRight === true ? directionRight = false : directionRight = true;
+
+    directionRight === true ? console.log({ directionRight }, 'right') : console.log({ directionRight }, 'left');
+}
+
+
+function autoCarouselMove() {
+
+    if (directionRight === true) {
+        nextCarouselImage();
+    } else {
+        previousCarouselImage();
+    }
+
 }
